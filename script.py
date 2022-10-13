@@ -17,7 +17,37 @@ def get_forecast( city='Pittsburgh' ):
     Hint:
     * Return the period that is labeled as "Tonight"
     '''
+    geolocator = Nominatim(user_agent='ModernProgramming')
+    location = geolocator.geocode('Pittsburgh',language='en')
+    latitude = location.latitude
+    longitude = location.longitude
+    if is.na(latitude) or is.na(longitude):
+        warnings.warn('CityNotFoundError')
+        return None
+    else:
+        URL = f'https://api.weather.gov/points/{latitude},{longitude}'
+        response = requests.get(URL)
+        if response.status_code != 200:
+            warnings.warn('CityNotFoundError')
+            return None
+        else:
+            forecast_link = response.json().get('properties').get('forecast')
+            resp = requests.get(forecast_link)
+            if resp.status_code != 200:
+                warnings.warn('ForecastUnavailable')
+                return None
+            else:
+                period = pd.DataFrame(resp.json().get('properties').get('periods'),copy=True)
+                if period.shape[0] == 0:
+                    warnings.warn('ForecastUnavailable')
+                    return None
+                else:
+                    forecast = period[period['name']=='Tonight']
+                    return(forecast['startTime'],forecast['endTime'], forecast.iloc[0,12])
+            
+    return response
 
+    raise NotImplementedError()
     raise NotImplementedError()
     
 
