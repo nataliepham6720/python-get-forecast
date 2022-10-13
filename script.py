@@ -58,7 +58,8 @@ def main():
     else:
         df = pd.DataFrame(columns=['Start Date', 'End Date', 'Forecast'])
 
-    df = df.append({'Start Date': period['startTime'], 'End Date': period['endTime'], 'Forecast': period['detailedForecast']}, ignore_index=True)
+    temp = pd.DataFrame({'Start Date': period['startTime'], 'End Date': period['endTime'], 'Forecast': period['detailedForecast']})
+    df = pd.concat([df,temp])
     df = df.drop_duplicates()
     df.to_pickle(file)
 
