@@ -43,34 +43,32 @@ def get_forecast(city='Pittsburgh'):
                     forecast = period[period['name'] == 'Tonight']
                     return (forecast)
     return response
-    
+
+
 def main():
     period = get_forecast()
 
     file = 'weather.pkl'
 
     if Path(file).exists():
-        df = pd.read_pickle( file )
+        df = pd.read_pickle(file)
     else:
-        df = pd.DataFrame(columns=['Start Date','End Date','Forecast'])
-
-    temp = pd.DataFrame({'Start Date': period['startTime'], \
-        'End Date': period['endTime'], 'Forecast': period['detailedForecast']})
+        df = pd.DataFrame(columns=['Start Date', 'End Date', 'Forecast'])
+    temp = pd.DataFrame({'Start Date': period['startTime'],
+            'End Date': period['endTime'], 'Forecast': period['detailedForecast']})
     df = pd.concat([df, temp])
     df = df.drop_duplicates()
     df.to_pickle(file)
-
     # sort repositories
     file = open("README.md", "w")
-    file.write('![Status](https://github.com/nataliepham6720/python-get-forecast/' + \
-        'actions/workflows/build.yml/badge.svg)\n')
-    file.write('![Status](https://github.com/nataliepham6720/python-get-forecast/' + \
-        'actions/workflows/pretty.yml/badge.svg)\n')
+    file.write('![Status](https://github.com/nataliepham6720/' +
+            'python-get-forecast/actions/workflows/build.yml/badge.svg)\n')
+    file.write('![Status](https://github.com/nataliepham6720/' +
+            'python-get-forecast/actions/workflows/pretty.yml/badge.svg)\n')
     file.write('# Pittsburgh Nightly Forecast\n\n')
-    
-    file.write(df.to_markdown(tablefmt='github'))
-    file.write('\n\n---\nCopyright © 2022 Pittsburgh Supercomputing Center.' + \
-        'All Rights Reserved.')
+    file.write(df.to_markdown(tablefmt = 'github'))
+    file.write('\n\n---\nCopyright © 2022 Pittsburgh Supercomputing Center.'+
+            'All Rights Reserved.')
     file.close()
 
 
