@@ -21,7 +21,7 @@ def get_forecast( city='Pittsburgh' ):
     location = geolocator.geocode('Pittsburgh',language='en')
     latitude = location.latitude
     longitude = location.longitude
-    if is.na(latitude) or is.na(longitude):
+    if bool(latitude) or bool(longitude):
         warnings.warn('CityNotFoundError')
         return None
     else:
