@@ -46,9 +46,6 @@ def get_forecast( city='Pittsburgh' ):
                     return(forecast['startTime'],forecast['endTime'], forecast.iloc[0,12])
             
     return response
-
-    raise NotImplementedError()
-    raise NotImplementedError()
     
 
 def main():
