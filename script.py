@@ -21,7 +21,7 @@ def get_forecast( city='Pittsburgh' ):
     location = geolocator.geocode('Pittsburgh',language='en')
     latitude = location.latitude
     longitude = location.longitude
-    if bool(latitude) or bool(longitude):
+    if not(bool(latitude) and bool(longitude)):
         warnings.warn('CityNotFoundError')
         return None
     else:
@@ -67,8 +67,8 @@ def main():
 
     #sort repositories
     file = open("README.md", "w")
-    file.write('![Status](https://github.com/icaoberg/python-get-forecast/actions/workflows/build.yml/badge.svg)\n')
-    file.write('![Status](https://github.com/icaoberg/python-get-forecast/actions/workflows/pretty.yml/badge.svg)\n')
+    file.write('![Status](https://github.com/nataliepham6720/python-get-forecast/actions/workflows/build.yml/badge.svg)\n')
+    file.write('![Status](https://github.com/nataliepham6720/python-get-forecast/actions/workflows/pretty.yml/badge.svg)\n')
     file.write('# Pittsburgh Nightly Forecast\n\n')
     
     file.write(df.to_markdown(tablefmt='github'))
