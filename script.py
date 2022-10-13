@@ -22,25 +22,21 @@ def get_forecast( city='Pittsburgh' ):
     latitude = location.latitude
     longitude = location.longitude
     if not(bool(latitude) and bool(longitude)):
-        warnings.warn('CityNotFoundError')
-        return None
+        raise CityNotFoundError
     else:
         URL = f'https://api.weather.gov/points/{latitude},{longitude}'
         response = requests.get(URL)
         if response.status_code != 200:
-            warnings.warn('CityNotFoundError')
-            return None
+            raise CityNotFoundError
         else:
             forecast_link = response.json().get('properties').get('forecast')
             resp = requests.get(forecast_link)
             if resp.status_code != 200:
-                warnings.warn('ForecastUnavailable')
-                return None
+                raise ForecastUnavailable
             else:
                 period = pd.DataFrame(resp.json().get('properties').get('periods'),copy=True)
                 if period.shape[0] == 0:
-                    warnings.warn('ForecastUnavailable')
-                    return None
+                    raise ForecastUnavailable
                 else:
                     forecast = period[period['name']=='Tonight']
                     return(forecast)
@@ -72,6 +68,7 @@ def main():
     file.write(df.to_markdown(tablefmt='github'))
     file.write('\n\n---\nCopyright © 2022 Pittsburgh Supercomputing Center. All Rights Reserved.')
     file.close()
+
 
 if __name__ == "__main__":
     main()
