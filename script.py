@@ -10,9 +10,9 @@ def get_forecast(city='Pittsburgh'):
     Inputs:
     city (string): A valid string
     Output:
-    period (dictionary/JSON): a dictionary containing at least, 
+    period (dictionary/JSON): a dictionary containing at least,
     the forecast keys startTime, endTime and detailedForecast.
-    Throws:CityNotFoundError if geopy returns empty list or if the 
+    Throws:CityNotFoundError if geopy returns empty list or if the
     latitude longitude fields are empty. ForecastUnavailable if the
     period is empty or the API throws any status code that is not 200
     Hint:
@@ -22,7 +22,7 @@ def get_forecast(city='Pittsburgh'):
     location = geolocator.geocode('Pittsburgh', language='en')
     latitude = location.latitude
     longitude = location.longitude
-    if not(bool(latitude) and bool(longitude)):
+    if not (bool(latitude) and bool(longitude)):
         raise CityNotFoundError
     else:
         URL = f'https://api.weather.gov/points/{latitude},{longitude}'
@@ -40,12 +40,10 @@ def get_forecast(city='Pittsburgh'):
                 if period.shape[0] == 0:
                     raise ForecastUnavailable
                 else:
-                    forecast = period[period['name']=='Tonight']
-                    return(forecast)
-            
+                    forecast = period[period['name'] == 'Tonight']
+                    return (forecast)
     return response
     
-
 def main():
     period = get_forecast()
 
@@ -54,25 +52,25 @@ def main():
     if Path(file).exists():
         df = pd.read_pickle( file )
     else:
-        df = pd.DataFrame(columns=['Start Date', 'End Date', 'Forecast'])
+        df = pd.DataFrame(columns=['Start Date','End Date','Forecast'])
 
     temp = pd.DataFrame({'Start Date': period['startTime'], \
-    'End Date': period['endTime'], 'Forecast': period['detailedForecast']})
-    df = pd.concat([df,temp])
+        'End Date': period['endTime'], 'Forecast': period['detailedForecast']})
+    df = pd.concat([df, temp])
     df = df.drop_duplicates()
     df.to_pickle(file)
 
-    #sort repositories
+    # sort repositories
     file = open("README.md", "w")
     file.write('![Status](https://github.com/nataliepham6720/python-get-forecast/' + \
-    'actions/workflows/build.yml/badge.svg)\n')
+        'actions/workflows/build.yml/badge.svg)\n')
     file.write('![Status](https://github.com/nataliepham6720/python-get-forecast/' + \
-    'actions/workflows/pretty.yml/badge.svg)\n')
+        'actions/workflows/pretty.yml/badge.svg)\n')
     file.write('# Pittsburgh Nightly Forecast\n\n')
     
     file.write(df.to_markdown(tablefmt='github'))
     file.write('\n\n---\nCopyright © 2022 Pittsburgh Supercomputing Center.' + \
-    'All Rights Reserved.')
+        'All Rights Reserved.')
     file.close()
 
 
