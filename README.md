@@ -1,5 +1,5 @@
-![Status](https://github.com/CMU-MS-DAS-Modern-Programming-Mini/python-get-forecast/actions/workflows/build.yml/badge.svg)
-![Status](https://github.com/CMU-MS-DAS-Modern-Programming-Mini/python-get-forecast/actions/workflows/pretty.yml/badge.svg)
+![Status](https://github.com/nataliepham6720/python-get-forecast/actions/workflows/build.yml/badge.svg)
+![Status](https://github.com/nataliepham6720/python-get-forecast/actions/workflows/pretty.yml/badge.svg)
 
 # Pittsburgh Nightly Forecast
 
