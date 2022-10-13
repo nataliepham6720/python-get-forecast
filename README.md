@@ -7,4 +7,4 @@
 |  1 | 2022-10-13T18:00:00-04:00 | 2022-10-14T06:00:00-04:00 | Partly cloudy, with a low around 41. Southwest wind 3 to 8 mph. New rainfall amounts less than a tenth of an inch possible. |
 
 ---
-Copyright © 2022 Pittsburgh Supercomputing Center. All Rights Reserved.
+Copyright © 2022 Pittsburgh Supercomputing Center.All Rights Reserved.
