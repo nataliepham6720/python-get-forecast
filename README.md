@@ -8,6 +8,7 @@
 |  1 | 2022-10-13T18:00:00-04:00 | 2022-10-14T06:00:00-04:00 | Mostly clear, with a low around 41. Southwest wind 2 to 7 mph.                                                              |
 |  0 | 2022-10-13T22:00:00-04:00 | 2022-10-14T06:00:00-04:00 | Mostly clear, with a low around 41. South wind around 3 mph.                                                                |
 |  0 | 2022-10-14T21:00:00-04:00 | 2022-10-15T06:00:00-04:00 | Partly cloudy, with a low around 46. South wind 3 to 8 mph.                                                                 |
+|  0 | 2022-10-15T22:00:00-04:00 | 2022-10-16T06:00:00-04:00 | Mostly clear, with a low around 40. South wind around 2 mph.                                                                |
 
 ---
 Copyright © 2022 Pittsburgh Supercomputing Center.All Rights Reserved.
