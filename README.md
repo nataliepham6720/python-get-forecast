@@ -15,6 +15,7 @@
 |  0 | 2022-10-19T22:00:00-04:00 | 2022-10-20T06:00:00-04:00 | Widespread frost after 2am. Partly cloudy, with a low around 34. Southwest wind around 8 mph.                                                                                       |
 |  0 | 2022-10-20T21:00:00-04:00 | 2022-10-21T06:00:00-04:00 | Partly cloudy, with a low around 35. South wind around 3 mph.                                                                                                                       |
 |  0 | 2022-10-22T21:00:00-04:00 | 2022-10-23T06:00:00-04:00 | Mostly clear, with a low around 42. East wind around 5 mph.                                                                                                                         |
+|  0 | 2022-10-23T22:00:00-04:00 | 2022-10-24T06:00:00-04:00 | Mostly clear, with a low around 44. East wind around 2 mph.                                                                                                                         |
 
 ---
 Copyright © 2022 Pittsburgh Supercomputing Center.All Rights Reserved.
