@@ -24,6 +24,7 @@
 |  0 | 2022-10-29T22:00:00-04:00 | 2022-10-30T06:00:00-04:00 | Partly cloudy, with a low around 37. East wind around 5 mph.                                                                                                                        |
 |  0 | 2022-10-30T22:00:00-04:00 | 2022-10-31T06:00:00-04:00 | A slight chance of rain showers after 5am. Cloudy, with a low around 50. Southeast wind around 3 mph. Chance of precipitation is 20%.                                               |
 |  0 | 2022-10-31T22:00:00-04:00 | 2022-11-01T06:00:00-04:00 | A chance of rain showers. Cloudy, with a low around 56. South wind around 3 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.        |
+|  0 | 2022-11-01T21:00:00-04:00 | 2022-11-02T06:00:00-04:00 | Areas of fog after midnight. Mostly cloudy, with a low around 50. West wind around 3 mph.                                                                                           |
 
 ---
 Copyright © 2022 Pittsburgh Supercomputing Center.All Rights Reserved.
