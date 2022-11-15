@@ -36,6 +36,7 @@
 |  0 | 2022-11-11T20:00:00-05:00 | 2022-11-12T06:00:00-05:00 | Rain before 2am. Cloudy. Low around 44, with temperatures rising to around 50 overnight. Northwest wind 6 to 13 mph, with gusts as high as 23 mph. Chance of precipitation is 100%. New rainfall amounts between a half and three quarters of an inch possible. |
 |  0 | 2022-11-12T20:00:00-05:00 | 2022-11-13T06:00:00-05:00 | Scattered snow showers after 1am. Cloudy, with a low around 33. West wind around 7 mph. Chance of precipitation is 30%.                                                                                                                                         |
 |  0 | 2022-11-13T20:00:00-05:00 | 2022-11-14T06:00:00-05:00 | Scattered snow showers before 10pm. Mostly cloudy, with a low around 28. West wind 3 to 7 mph.                                                                                                                                                                  |
+|  0 | 2022-11-14T20:00:00-05:00 | 2022-11-15T06:00:00-05:00 | Mostly cloudy, with a low around 31. Northeast wind around 5 mph.                                                                                                                                                                                               |
 
 ---
 Copyright © 2022 Pittsburgh Supercomputing Center.All Rights Reserved.
